@@ -8,3 +8,14 @@
 
 # User.create([{ name: "Andy", email: 'andy@appacademy.io'} ])
 # User.create([{ name: "Zahin", email: 'zahin@appacademy.io'} ])
+User.create([{ username: "Nad"} ])
+User.create([{ username: "Olga"} ])
+User.create([{ username: "Micheal"} ])
+User.create([{ username: "Gary"} ])
+User.create([{ username: "Tim"} ])
+
+Artwork.create([{ title: "Mona Lisa", image_url: "abcd.efg", artist_id: "Nad"}])
+Artwork.create([{ title: "Man Sweeping", image_url: "hig.klm"}])
+Artwork.create([{ title: "Starry Night", image_url: "opq.rst"}])
+Artwork.create([{ title: "Cistine Ceiling", image_url: "uvx.wyz"}])
+Artwork.create([{ title: "The Scream", image_url: "123.abc"}])
