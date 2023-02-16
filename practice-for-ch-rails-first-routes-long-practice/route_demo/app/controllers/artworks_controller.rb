@@ -2,8 +2,10 @@ class ArtworksController < ApplicationController
     def index
     #   debugger
       @user = User.find(params[:user_id])
-    #   @artworks = Artwork.find_by(artist_id: params[:user_id])
-      render json: @user.artworks + @user.shared_artworks
+      render json: @user.find_shared_and_owned_artworks(params[:user_id])
+      
+      # #   @artworks = Artwork.find_by(artist_id: params[:user_id])
+    #   render json: @user.artworks + @user.shared_artworks
     end
   
     def create
