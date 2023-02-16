@@ -29,9 +29,6 @@ class UsersController < ApplicationController
 
   end
 
-  def user_params
-    params.require(:user).permit(:username)
-  end
 
   def destroy
     @user = User.find(params[:id])
@@ -40,5 +37,10 @@ class UsersController < ApplicationController
     else
       render json: @user.errors.full_messages, status: 422
     end
+  end
+
+  private
+  def user_params
+    params.require(:user).permit(:username)
   end
 end
