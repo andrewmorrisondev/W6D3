@@ -11,8 +11,13 @@ Rails.application.routes.draw do
   # delete "/users/:id", to: "users#destroy"
 
   resources :users, only:[:create, :destroy, :index, :show, :update]
-  resources :artworks, only:[:create, :destroy, :index, :show, :update]
-  post "/artwork_shares", to: 'artwork_shares#create'
+  resources :artworks, only:[:create, :destroy, :show, :update]
+  post "/artwork_share", to: 'artwork_share#create'
+  delete "/artwork_share/:id", to: "artwork_share#destroy"
+  resources :users do
+    resources :artworks, only: :index
+  end
+
   # Defines the root path route ("/")
   # root "articles#index"
 end
