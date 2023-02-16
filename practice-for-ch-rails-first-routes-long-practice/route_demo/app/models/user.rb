@@ -17,8 +17,8 @@ class User < ApplicationRecord
     through: :artwork_shares,
     source: :artwork
 
-  def self.find_shared_and_owned_artworks
-    Artwork.left_outer_joins(:shared_artworks).where()
+  def self.find_shared_and_owned_artworks(stuff)
+    Artwork.left_outer_joins(:shared_artworks).where("")
   end
     
 end
